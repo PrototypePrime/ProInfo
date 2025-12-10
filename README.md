@@ -68,14 +68,14 @@ Visualize the physical distribution of your targets across the globe.
 - **Interactive**: Click any node to jump to its intel card.
 
 ![Tactical Map](./public/screenshots/tactical_map.png)
-*(Place `tactical_map.png` in `public/screenshots/`)*
+*(Concept Visualization)*
 
 ### 4. 🛠️ SOC Power Tools
 Dedicated utilities for the daily grind of a security analyst.
 - **IOC Extractor**: Paste a messy email header or log file. ProInfo extracts IPs, Domains, and Hashes, and "defangs" them (e.g., `example[.]com`) for safe reporting.
 
 ![IOC Extractor](./public/screenshots/ioc_extractor.png)
-*(Place `ioc_extractor.png` in `public/screenshots/`)*
+*(Concept Visualization)*
 
 ![Pivot Workflow Infographic](./public/screenshots/pivot_flow.png)
 *Visualizing the Recursive Pivot Logic*
