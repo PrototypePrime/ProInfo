@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#0f172a"/>
+  <path d="M50 85L20 70V30L50 15L80 30V70L50 85Z" fill="none" stroke="#22d3ee" stroke-width="5"/>
+  <path d="M50 25V65M30 45L50 65L70 45" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="opacity" values="0.5;1;0.5" duration="2s" repeatCount="indefinite"/>
+  </path>
+</svg>

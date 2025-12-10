@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Slate/Blue Theme - Reduced Eye Strain */
+    --background: 222 47% 11%;
+    /* #0f172a (Slate 900) */
+    --foreground: 210 40% 98%;
+    /* Slate 50 */
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    /* #3b82f6 (Blue 500) - Readable, Professional */
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 19% 27%;
+    /* Slate 800 */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+    /* Slate 400 */
+
+    --accent: 250 80% 60%;
+    /* Periwinkle/Indigo - Softer than Pink */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 224 76% 48%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    /* Cleaner than monospace for main UI */
+  }
+
+  /* Subtle Grid - Low Opacity */
+  .bg-grid-small-white {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Accessibility Overrides */
+.motion-reduce *,
+.motion-reduce *::before,
+.motion-reduce *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* High Contrast adjustments */
+.high-contrast button {
+  border: 2px solid white !important;
+}
