@@ -77,9 +77,6 @@ Dedicated utilities for the daily grind of a security analyst.
 ![IOC Extractor](./public/screenshots/ioc_extractor.png)
 *(Concept Visualization)*
 
-![Pivot Workflow Infographic](./public/screenshots/pivot_flow.png)
-*Visualizing the Recursive Pivot Logic*
-
 ---
 
 ## 📚 Use Cases
