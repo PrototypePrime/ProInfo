@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Shield, CheckCircle, RefreshCcw } from 'lucide-react';
 
-export function IocExtractor() {
+export default function IocExtractor() {
     const [input, setInput] = useState('');
     const [output, setOutput] = useState<{ ips: string[], domains: string[], urls: string[], hashes: string[] } | null>(null);
 

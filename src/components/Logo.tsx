@@ -1,7 +1,7 @@
 import { Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export function ProInfoLogo({ collapsed = false }: { collapsed?: boolean }) {
+export default function Logo({ collapsed = false }: { collapsed?: boolean }) {
     return (
         <div className="flex items-center gap-2 overflow-hidden">
             <div className="relative flex-shrink-0 w-8 h-8 flex items-center justify-center">

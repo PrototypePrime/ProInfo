@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Clipboard, X, Terminal, ArrowRight } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { cn } from '../lib/utils';
 
 interface MultiTargetInputProps {
     onAnalyze: (targets: string[]) => void;
     isLoading?: boolean;
 }
 
-export function MultiTargetInput({ onAnalyze, isLoading }: MultiTargetInputProps) {
+export default function MultiTargetInput({ onAnalyze, isLoading }: MultiTargetInputProps) {
     const [value, setValue] = useState('');
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 

@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { MultiTargetInput } from '../../components/Input/MultiTargetInput';
-import { analyzeIp } from '../../services/ipUtils';
-import type { IpInfo } from '../../services/ipUtils';
+import MultiTargetInput from './MultiTargetInput';
+import LinkGraph from './LinkGraph';
+import TacticalMap from './TacticalMap';
+import { analyzeIp, type IpInfo } from '../services/ipUtils';
 import { motion } from 'framer-motion';
 import { Globe, CheckCircle, Download, Table, FileSearch, Map as MapIcon, Share2, ShieldAlert, Network } from 'lucide-react';
-import { cn } from '../../lib/utils';
-import { TacticalMap } from '../../components/Map/TacticalMap';
-import { LinkGraph } from '../../components/Graph/LinkGraph';
+import { cn } from '../lib/utils';
 // @ts-ignore
 import jsPDF from 'jspdf';
 // @ts-ignore
@@ -18,7 +17,7 @@ interface IpInvestigatorProps {
     setResults: (results: IpInfo[]) => void;
 }
 
-export function IpInvestigator({ results, setResults }: IpInvestigatorProps) {
+export default function IpInvestigator({ results, setResults }: IpInvestigatorProps) {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [activeTab, setActiveTab] = useState<'intel' | 'map' | 'graph'>('intel');
 

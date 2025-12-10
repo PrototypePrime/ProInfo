@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, LayoutDashboard, Clock, Settings, Wrench } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { motion } from 'framer-motion';
-import { ProInfoLogo } from '../components/Branding/Logo';
+import Logo from '../components/Logo';
 
 export type ViewType = 'intel' | 'logs' | 'settings' | 'tools';
 
@@ -46,7 +46,7 @@ function SidebarItem({ icon: Icon, label, active, collapsed, onClick }: SidebarI
     );
 }
 
-export function DashboardLayout({ children, activeView, onNavigate }: DashboardLayoutProps) {
+export default function DashboardLayout({ children, activeView, onNavigate }: DashboardLayoutProps) {
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
     return (
@@ -57,9 +57,7 @@ export function DashboardLayout({ children, activeView, onNavigate }: DashboardL
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="border-r border-border bg-card/50 backdrop-blur-md flex flex-col h-full z-20"
             >
-                <div className="h-20 flex items-center justify-center px-4 border-b border-border bg-black/20 overflow-hidden flex-shrink-0">
-                    <ProInfoLogo collapsed={sidebarCollapsed} />
-                </div>
+                <Logo collapsed={sidebarCollapsed} />
 
                 <nav className="flex-1 py-6 space-y-1 overflow-y-auto overflow-x-hidden custom-scrollbar">
                     <div className={cn("px-4 pb-2 text-[10px] font-mono text-muted-foreground uppercase opacity-50 transition-all", sidebarCollapsed && "opacity-0 h-0 p-0 overflow-hidden")}>

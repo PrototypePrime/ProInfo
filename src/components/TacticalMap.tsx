@@ -1,6 +1,7 @@
-import { MapContainer, TileLayer, Popup, Polyline, CircleMarker } from 'react-leaflet';
+
+import { MapContainer, TileLayer, Popup, CircleMarker, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import type { IpInfo } from '../../services/ipUtils';
+import type { IpInfo } from '../services/ipUtils';
 // import L from 'leaflet'; // Unused
 import { Terminal } from 'lucide-react';
 
@@ -13,7 +14,7 @@ interface TacticalMapProps {
     data: IpInfo[];
 }
 
-export function TacticalMap({ data }: TacticalMapProps) {
+export default function TacticalMap({ data }: TacticalMapProps) {
     const validPoints = data.filter(d => d.lat && d.lon);
 
     // Default center
@@ -48,7 +49,7 @@ export function TacticalMap({ data }: TacticalMapProps) {
                 {/* Connection Lines */}
                 {flightPaths.map((path, idx) => (
                     <Polyline
-                        key={`path-${idx}`}
+                        key={`path - ${idx} `}
                         positions={path.positions}
                         pathOptions={{ color: path.color, weight: 1, opacity: 0.3, dashArray: '5, 10' }}
                     />
@@ -99,7 +100,7 @@ export function TacticalMap({ data }: TacticalMapProps) {
                                         <strong className="text-primary block mb-1 text-sm">{point.ip}</strong>
                                         <span className="block text-muted-foreground uppercase">{point.country || 'Unknown Location'}</span>
                                         {point.threatLevel && (
-                                            <div className={`mt-2 px-2 py-0.5 text-[10px] font-bold rounded border ${isCritical ? 'border-red-500/50 bg-red-500/10 text-red-500' : 'border-blue-500/50 bg-blue-500/10 text-blue-500'}`}>
+                                            <div className={`mt - 2 px - 2 py - 0.5 text - [10px] font - bold rounded border ${isCritical ? 'border-red-500/50 bg-red-500/10 text-red-500' : 'border-blue-500/50 bg-blue-500/10 text-blue-500'} `}>
                                                 THREAT: {point.threatLevel}
                                             </div>
                                         )}

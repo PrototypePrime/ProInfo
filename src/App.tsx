@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { DashboardLayout, type ViewType } from './layouts/DashboardLayout';
-import { IpInvestigator } from './features/ip-intel/IpInvestigator';
-import { ScanHistory } from './features/history/ScanHistory';
-import { Settings } from './features/settings/Settings';
-import { IocExtractor } from './features/tools/IocExtractor';
+import DashboardLayout, { type ViewType } from './layouts/DashboardLayout';
+import IpInvestigator from './components/IpInvestigator';
+import ScanHistory from './components/ScanHistory';
+import Settings from './components/Settings';
+import IocExtractor from './components/IocExtractor';
 import type { IpInfo } from './services/ipUtils';
 
 function App() {

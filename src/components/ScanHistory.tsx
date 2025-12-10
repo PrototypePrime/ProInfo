@@ -1,11 +1,8 @@
-import { History, Trash2, RotateCcw } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import type { IpInfo } from '../../services/ipUtils';
 
-interface ScanHistoryProps {
-    onRestore: (data: IpInfo[]) => void;
-}
+import { motion } from 'framer-motion';
+import { Trash2, RotateCcw, History as HistoryIcon } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import type { IpInfo } from '../services/ipUtils';
 
 interface HistoryItem {
     id: string;
@@ -14,7 +11,7 @@ interface HistoryItem {
     data: IpInfo[];
 }
 
-export function ScanHistory({ onRestore }: ScanHistoryProps) {
+export default function ScanHistory({ onRestore }: { onRestore: (results: any[]) => void }) {
     const [history, setHistory] = useState<HistoryItem[]>([]);
 
     useEffect(() => {
@@ -46,7 +43,7 @@ export function ScanHistory({ onRestore }: ScanHistoryProps) {
             <div className="flex items-center justify-between border-b border-primary/20 pb-4">
                 <div className="space-y-1">
                     <h2 className="text-2xl font-bold tracking-tight text-primary flex items-center gap-2">
-                        <History className="text-primary" /> Scan History
+                        <HistoryIcon className="text-primary" /> Scan History
                     </h2>
                     <p className="text-sm text-muted-foreground">
                         Archive of previous intelligence operations.
@@ -101,7 +98,7 @@ export function ScanHistory({ onRestore }: ScanHistoryProps) {
                     ))}
                     {history.length === 0 && (
                         <div className="p-12 text-center text-muted-foreground text-sm italic flex flex-col items-center gap-2">
-                            <History size={32} className="opacity-20" />
+                            <HistoryIcon size={32} className="opacity-20" />
                             No local scan history found.
                         </div>
                     )}

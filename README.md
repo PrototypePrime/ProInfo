@@ -60,7 +60,7 @@ The heart of ProInfo. Recursively traverse the internet's graph structure.
 - **Multi-Vector**: Pivot from IP -> Domain and Domain -> IP seamlessly.
 
 ![Pivot Workflow Infographic](./public/screenshots/pivot_flow.png)
-*Visualizing the Recursive Pivot Logic*
+*Visualizing the Recursive Pivot Logic: The diagram above demonstrates the vertical hierarchical flow. Starting from a root domain, the system resolves its IP, which then reveals a PTR record, creating a clear, indented lineage of your investigation.*
 
 ### 3. 🗺️ Tactical Heatmap
 Visualize the physical distribution of your targets across the globe.

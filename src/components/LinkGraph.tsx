@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from 'react';
 // @ts-ignore
 import ForceGraph2D from 'react-force-graph-2d';
-import type { IpInfo } from '../../services/ipUtils';
+import type { IpInfo } from '../services/ipUtils';
 import { Maximize2, Minimize2, Share2, Activity } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { cn } from '../lib/utils';
 
 interface LinkGraphProps {
     data: IpInfo[];
 }
 
-export function LinkGraph({ data }: LinkGraphProps) {
+export default function LinkGraph({ data }: LinkGraphProps) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const fgRef = useRef<any>(null);

@@ -1,8 +1,8 @@
 import { Settings as SettingsIcon, Shield, Layout, Info } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '../lib/utils';
 
-export function Settings() {
+export default function Settings() {
     // Load initial state from local storage or defaults
     const [highContrast, setHighContrast] = useState(() => {
         return localStorage.getItem('proinfo_high_contrast') === 'true';
