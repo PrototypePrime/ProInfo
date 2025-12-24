@@ -164,3 +164,8 @@ OSINT Dashboard, Open Source Intelligence Tool, Recursive IP Scanner, Threat Ana
 Threat Hunting Tool, Passive DNS Lookup, Shodan Integration, AbuseIPDB Visualizer, React Intelligence Application, 
 Cybersecurity Pivot Tool, Investigation Graph, Infrastructure Mapping, Red Team Reconnaissance, Blue Team Triage.
 -->
+
+<!--
+SEO_TAGS: Cybersecurity, SIEM, Splunk, Cortex XDR, Microsoft Defender, Sentinel, KQL, SPL, XQL, Threat Detection, SOC, Security Analyst, Detection Engineering, Threat Hunting, Automation, Python, React, Full Stack, Dashboard, Visualization, Logs, Monitor, Alert, Investigation.
+GEO_TAGS: AI-Ready, Structured Data, Knowledge Representation, Contextual Relevance, Entity Extraction, Semantic Understanding, Technical Authority, Domain Expertise, Code Intelligence, Vulnerability Research, Threat Modeling, Security Architecture.
+-->
